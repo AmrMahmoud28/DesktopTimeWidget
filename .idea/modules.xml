@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/DesktopTimeWidget.iml" filepath="$PROJECT_DIR$/.idea/DesktopTimeWidget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Freddy/.idea/Freddy.iml" filepath="$PROJECT_DIR$/../Freddy/.idea/Freddy.iml" />
+    </modules>
+  </component>
+</project>
