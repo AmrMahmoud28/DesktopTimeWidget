@@ -183,9 +183,9 @@ def prayerTimes():
     pconf = PrayerConf(longitude, latitude, timezone, fajr_isha_method, asr_fiqh)
     pt = Prayer(pconf, datetime.date.today())
 
-    prayersTime = [pt.last_third_of_night(50), pt.fajr_time(50), pt.sherook_time(50), pt.dohr_time(50), pt.asr_time(50),
-               pt.maghreb_time(50), pt.ishaa_time(50), pt.second_third_of_night(50),
-               pt.midnight(50)]
+    prayersTime = [pt.last_third_of_night(), pt.fajr_time(), pt.sherook_time(), pt.dohr_time(), pt.asr_time(),
+               pt.maghreb_time(), pt.ishaa_time(), pt.second_third_of_night(),
+               pt.midnight()]
 
     prayerName = ["Qiyam", "Fajr", "Sherook", "Jumuah" if currentTime.weekday() == 4 else "Dohr", "Asr", "Maghreb", "Ishaa", "1st Third", "Midnight"]
 
