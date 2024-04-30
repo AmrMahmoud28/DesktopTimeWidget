@@ -244,9 +244,9 @@ dateFont = Font(size=17, family="Bahnschrift SemiBold")
 prayerFont = Font(size=15, family="Bahnschrift SemiBold")
 courseFont = Font(size=12, family="Bahnschrift SemiBold")
 
-# Red: #E50914, Gold: #D5B038, Blue: #19E2EA
-frontground = "#D5B038"
-background = "#000001"
+# Red: #E50914, Gold: #D5B038, Blue: #19E2EA, White: #F7FFFE, Light Blue: #B6D4CC
+frontground = "#B6D4CC"
+background = "#B6D4CF" # 000001
 
 timeShow = Label(root, text=timeFormat(), bg=background, fg=frontground,
                  font=('ds-digital', 40, 'bold'))  # ('ds-digital', 40, 'bold')
