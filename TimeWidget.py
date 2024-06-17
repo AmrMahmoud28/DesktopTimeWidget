@@ -252,8 +252,8 @@ timeShow = Label(root, text=timeFormat(), bg=background, fg=frontground,
                  font=('ds-digital', 40, 'bold'))  # ('ds-digital', 40, 'bold')
 dateShow = Label(root, text=dateFormat(), bg=background, fg=frontground, font=dateFont)
 prayerShow = Label(root, text=prayerTimes(), bg=background, fg=frontground, font=prayerFont)
-courseShow = Label(root, text=courseFormat(), bg=background, fg=frontground, font=courseFont)
-# courseShow = Label(root, text="End of Semester", bg=background, fg=frontground, font=courseFont)
+# courseShow = Label(root, text=courseFormat(), bg=background, fg=frontground, font=courseFont)
+courseShow = Label(root, text="End of Semester", bg=background, fg=frontground, font=courseFont)
 
 root.wm_attributes('-transparentcolor', background)
 root.config(bg=background)
@@ -266,18 +266,30 @@ courseShow.pack()
 
 root.bind('<F12>', quitWin)
 
-while True:
-    try:
-        timeShow.config(text=timeFormat())
-        timeShow.update()
 
-        dateShow.config(text=dateFormat())
-        dateShow.update()
+def update_labels():
+    timeShow.config(text=timeFormat())
+    dateShow.config(text=dateFormat())
+    prayerShow.config(text=prayerTimes())
+    # courseShow.config(text=courseFormat())
+    root.after(1000, update_labels)
 
-        prayerShow.config(text=prayerTimes())
-        prayerShow.update()
 
-        courseShow.config(text=courseFormat())
-        courseShow.update()
-    except:
-        quit()
+root.after(1000, update_labels)  # schedule the first update
+root.mainloop()
+
+# while True:
+#     try:
+#         timeShow.config(text=timeFormat())
+#         timeShow.update()
+#
+#         dateShow.config(text=dateFormat())
+#         dateShow.update()
+#
+#         prayerShow.config(text=prayerTimes())
+#         prayerShow.update()
+#
+#         # courseShow.config(text=courseFormat())
+#         # courseShow.update()
+#     except:
+#         quit()
